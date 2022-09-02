@@ -26,7 +26,11 @@ app.get("/pokemon", (req, res) => {
 //EDIT
 
 //SHOW
-
+app.get("/pokemon/:id", (req, res) => {
+    res.render("show.ejs", {
+       idPokemon: pokemon[req.params.id]
+    })
+})
 //listening
 app.listen(3000, () => {
     console.log("Its Working")

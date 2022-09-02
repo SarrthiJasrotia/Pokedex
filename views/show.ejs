@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs')%>
+</head>
+<body>
+    <div class="container">
+        <h1><%= idPokemon.name%></h1>
+        <img src="<%= idPokemon.img%>" alt="<%= idPokemon.name%>"><br>
+        Type:
+        <ul>
+            <% for(let i=0; i < idPokemon.type.length; i++) { %>
+                <li>
+                    <%= idPokemon.type[i]%>
+                </li>
+            <% } %>
+        </ul>
+        Stats: <br>
+        <ul>
+            <li>HP: <%= idPokemon.stats.hp%> </li>
+            <li>Attack: <%= idPokemon.stats.attack%> </li>
+            <li>Defense: <%= idPokemon.stats.defense%> </li>
+            <li>Speed: <%= idPokemon.stats.speed%></li>
+        </ul>
+        <a href="/pokemon">Back</a>
+
+    </div> 
+</body>
+</html>
